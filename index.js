@@ -5,6 +5,7 @@ app.get('/api/whoami', (req, res) => {
     var user_agent = req.headers['user-agent'];
     var regex = /\(([^\)]*)/;
     var software = regex.exec(user_agent)[1];
+    console.log(req.ips);
 
     res.send({
 	ipaddress: req.ip,
